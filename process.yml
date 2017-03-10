@@ -1,0 +1,15 @@
+apps:
+  - script         : bin/www
+    name           : 'etherchain-light'
+    instances      : 1
+    exec_mode      : fork
+    watch          : true
+    max_restarts   : 30
+    ignore_watch   : data
+    env            :
+      NODE_ENV     : development
+      PORT         : 3000
+    env_production :
+      NODE_ENV     : production
+      PORT	       : 3000
+

@@ -47,6 +47,22 @@ Supported Ethereum backend nodes: Parity
 
 NOTE: You can select the port of your chocie with: `PORT=4627 npm start`
 
+## Using PM2 
+
+First install pm2:
+	npm i -g pm2
+
+Make it start at boot:
+	sudo pm2 statrup
+
+Start etherchain-light:
+	pm2 start process.yml
+
+Make it persistent:
+	pm2 save
+
+Next time your machine boots up, etherchain-light will start automagically.	
+
 ## Screenshots
 ### Main page
 ![Main page](http://i.imgur.com/gl15FJS.png "Main page")
